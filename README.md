@@ -7,6 +7,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Resources](#resources)
+- [License](#license)
 - [Contributors](#contributors)
 
 ## Overview
@@ -58,6 +59,11 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Features
 
+## License
+
+   ![MIT License](https://img.shields.io/badge/license-MIT-brightgreen)
+      MIT License<br>
+  http://choosealicense.com/licenses/mit/<br>
 
 ## Contributors
 
