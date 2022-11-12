@@ -6,9 +6,9 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Resources](#resources)
 - [License](#license)
 - [Contributors](#contributors)
+- [Links](#links)
 
 ## Overview
 **User Story**<br>
@@ -45,19 +45,11 @@ This application uses Node.js, Inquirer, and MySQL.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+ ![screenshot](./assets/images/Screen%20Shot%202022-11-12%20at%204.59.00%20PM.png)
+ <br>
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
-## Resources
-
-
-
-## Features
+![screenshot](./assets/images/Screen%20Shot%202022-11-12%20at%204.58.21%20PM.png)
 
 ## License
 
@@ -67,4 +59,10 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Contributors
 
-[@jesciak](https://github.com/jesciak/),
+[@jesciak](https://github.com/jesciak/)
+
+## Links
+- [Github Repo](https://github.com/jesciak/Track_em_down_12.git)
+
+ - [Video Tutorial Link](https://drive.google.com/file/d/1YvES0cp4gAZtGlNxbmWV1edxjEvfT7wf/view)
+
