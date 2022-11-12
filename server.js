@@ -130,13 +130,10 @@ function addEmployee() {
                         if (err) throw err;
                         console.log(`Added ${answer.first_name} ${answer.last_name} to the database as a ${answer.role}`);
                         start();
-                    }
-
-                )
-            }
-            )
-    })
-}
+                    })
+                })
+        })
+    }
 function updateRole() {
     // var roleSelection = 'SELECT * FROM role;';
     // var deptSelection = 'SELECT * FROM department;';
@@ -144,8 +141,6 @@ function updateRole() {
 
     db.query('SELECT employee.id, employee.first_name, employee.last_name, role.title, role.salary, department.name AS department, e2.first_name AS manager FROM employee LEFT JOIN employee AS e2 ON e2.id= employee.manager_id JOIN role ON employee.role_id = role.id JOIN department ON role.department_id= department.id ORDER BY employee.id', function (err, res) {
         if (err) throw err;
-        // db.query(deptSelection, function (err, department) {
-        //     if (err) throw err;
         inquirer.prompt([
             {
                 name: 'employeeChoice',
@@ -166,7 +161,7 @@ function updateRole() {
                     if (err) throw err;
                     inquirer.prompt([
                         {
-                            name: 'update_role',
+                            name: 'updateRole',
                             type: 'list',
                             choices: function () {
                                 let roleArray = [];
@@ -179,9 +174,9 @@ function updateRole() {
                         }
                     ])
                         .then(function (answer) {
-                            db.query('SELECT * FROM role WHERE title = ?', answer.update_role, function (err, res) {
+                            db.query('SELECT * FROM role WHERE title = ?', answer.updateRole, function (err, res) {
                                 if (err) throw err;
-                                newRole.role_id = role[0].id;
+                                newRole.role_id = res[0].id;
                                 db.query('UPDATE employee SET role_id = ? WHERE first_name = ?', [newRole.role_id, newRole.first_name], function (err, res) {
                                     if (err) throw err;
                                     console.log("Updated employee's role successfully")
