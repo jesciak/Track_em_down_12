@@ -1,15 +1,17 @@
-const mysql = require('mysql2');
+// const mysql = require('mysql2');
+
 const inquirer = require('inquirer');
+const db= require('./connection');
 const consoleTable = require('console.table');
 
-const db = mysql.createConnection({
-    host: 'localhost',
-    port: '3306',
-    user: 'root',
-    password: 'trojans',
-    database: 'trackem_db'
+// const db = mysql.createConnection({
+//     host: 'localhost',
+//     port: '3306',
+//     user: 'root',
+//     password: 'trojans',
+//     database: 'trackem_db'
 
-});
+// });
 db.connect(function (err) {
     if (err) throw err;
     start();
@@ -134,6 +136,13 @@ function addEmployee() {
                 })
         })
     }
+    function viewRoles() {
+        db.query('SELECT * FROM role', function (err, res) {
+            if (err) throw err;
+            console.table(res);
+            start();
+        });
+    };
 function updateRole() {
     // var roleSelection = 'SELECT * FROM role;';
     // var deptSelection = 'SELECT * FROM department;';
@@ -189,13 +198,7 @@ function updateRole() {
             })
     })
 }
-function viewRoles() {
-    db.query('SELECT * FROM role', function (err, res) {
-        if (err) throw err;
-        console.table(res);
-        start();
-    });
-};
+
 function addRole() {
     let addedRole = {};
     db.query('SELECT * FROM department', function (err, res) {

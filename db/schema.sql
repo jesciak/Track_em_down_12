@@ -16,7 +16,7 @@ CREATE TABLE role(
     salary DECIMAL NOT NULL,
     department_id INT,
     FOREIGN KEY (department_id) REFERENCES department(id) ON DELETE SET NULL,
-     PRIMARY KEY (id)
+   PRIMARY KEY (id)
 );
 
 CREATE TABLE employee(
@@ -31,5 +31,5 @@ CREATE TABLE employee(
 );
 SELECT * FROM department;
 SELECT * FROM  employee;
-SELECT * FROM  roles;
+SELECT * FROM  role;
 
